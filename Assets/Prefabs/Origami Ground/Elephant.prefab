@@ -24,8 +24,8 @@ GameObject:
   - component: {fileID: 23087201723791308}
   - component: {fileID: 114215875611938956}
   m_Layer: 0
-  m_Name: 1A
-  m_TagString: Untagged
+  m_Name: Elephant
+  m_TagString: Friendly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1027787323920516}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.22, y: 0.6, z: -4}
+  m_LocalPosition: {x: -0.02, y: 0.54, z: -4.98}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -56,7 +56,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4dce73c3efb00904c95e3b81b91f7065, type: 2}
+  - {fileID: 2100000, guid: aa6f0ff09b4926a46a23539a76dffd1c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -105,8 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54c9024ba0cccd04a819baf4b008c6ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attack: 0
-  health: 0
-  attackSpeed: 0
-  type: 0
-  movementSpeed: 2
+  attack: 10
+  health: 150
+  attackSpeed: 5
+  type: 2
+  attackTimer: 0
+  movementSpeed: 1.2

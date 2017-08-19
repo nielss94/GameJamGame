@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Enemy
+  - EndHold
+  - Friendly
   layers:
   - Default
   - TransparentFX
