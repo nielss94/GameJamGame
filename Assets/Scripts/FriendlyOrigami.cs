@@ -45,8 +45,7 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
 
     void Movement()
     {
-        Debug.DrawLine(transform.position, new Vector3(transform.position.x, transform.position.y, transform.position.z + 10));
-        if( Physics.Raycast(transform.position, new Vector3(0,0,1), out hit, 10))
+        if( Physics.Raycast(transform.position, new Vector3(1,0,0), out hit, 10))
         {
             if(Vector3.Distance(transform.position, hit.transform.position) > 2)
             {

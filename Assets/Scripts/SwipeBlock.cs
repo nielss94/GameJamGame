@@ -43,7 +43,7 @@ public class SwipeBlock : MonoBehaviour {
             }else
             {
                 //Add selected lane
-                player.SpawnOrigami(selectedDot.GetComponent<Dot>().origami);
+                player.SpawnOrigami(selectedDot.GetComponent<Dot>().origami, selectedLane, LevelController.instance.stageNumber);
                 ResetDotSet();
                 paperPile.folding = false;
                 Destroy(gameObject);

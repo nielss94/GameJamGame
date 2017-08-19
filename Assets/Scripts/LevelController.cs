@@ -6,10 +6,11 @@ public class LevelController : MonoBehaviour
 {
     public static LevelController instance;
     public GameObject currentStage;
-
+    public int stageNumber;
     // Use this for initialization
     void Start()
     {
+        stageNumber = 1;
         instance = this;
         StartLevel();
     }
@@ -24,7 +25,7 @@ public class LevelController : MonoBehaviour
     {
         Destroy(currentStage);
         GameObject go = Instantiate(nextStage, nextStage.transform.position, nextStage.transform.rotation) as GameObject;
-
+        stageNumber++;
         currentStage = go;
         ResetOrigamiPos();
     }

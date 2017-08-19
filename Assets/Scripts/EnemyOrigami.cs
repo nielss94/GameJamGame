@@ -40,7 +40,7 @@ public class EnemyOrigami : MonoBehaviour, IHittable
             attackTimer -= Time.deltaTime;
         }
 
-        if (Physics.Raycast(transform.position, new Vector3(0, 0, -1), out hit))
+        if (Physics.Raycast(transform.position, new Vector3(-1, 0, 0), out hit))
         {
             if(Vector3.Distance(transform.position, hit.transform.position) < 2)
             {

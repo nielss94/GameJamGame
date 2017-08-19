@@ -11,13 +11,15 @@ public class Paper : MonoBehaviour {
     public GameObject swipeBlock;
     
 
-	void OnMouseDrag()
-    {
-        Vector3 pos = Input.mousePosition;
-        pos.z = pos.z + 5;
-        transform.position = GameObject.Find("Main Camera").GetComponent<Camera>().ScreenToWorldPoint(pos);
 
-        if(Physics.Raycast(transform.position, Vector3.down, out hit, 1))
+    void OnMouseDrag()
+    {
+        Vector3 distance_to_screen = Camera.main.WorldToScreenPoint(gameObject.transform.position);
+        Vector3 pos_move = Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, distance_to_screen.z));
+        transform.position = new Vector3(pos_move.x, transform.position.y, pos_move.z);
+
+
+        if (Physics.Raycast(transform.position, Vector3.down, out hit, 5))
         {
             if (hit.transform.CompareTag("Lane"))
             {
@@ -30,7 +32,6 @@ public class Paper : MonoBehaviour {
     {
         if (selectedLane != null)
         {
-
             paperPile.folding = true;
             GameObject go = Instantiate(swipeBlock, swipeBlock.transform.position, swipeBlock.transform.rotation) as GameObject;
             go.GetComponent<SwipeBlock>().selectedLane = selectedLane;
