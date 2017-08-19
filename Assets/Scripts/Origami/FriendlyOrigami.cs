@@ -36,10 +36,7 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
             canvas = transform.GetChild(0).gameObject;
         }
 
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
+        
         
 	}
 
@@ -120,5 +117,10 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
         go.transform.SetParent(canvas.transform);
         go.transform.localScale = new Vector3(1, 1, 1);
         Destroy(go.gameObject, .3f);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            GameController.instance.StartCoroutine(GameController.instance.CheckIfLoss());
+        }
     }
 }
