@@ -32,6 +32,9 @@ public class LevelController : MonoBehaviour
     public void ResetOrigamiPos()
     {
         GameObject[] allOrigamis = GameObject.FindGameObjectsWithTag("Friendly");
-
+        foreach(GameObject go in allOrigamis)
+        {
+            go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y, go.transform.position.z - 20);
+        }
     }
 }

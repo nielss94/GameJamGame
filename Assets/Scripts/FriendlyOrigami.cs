@@ -4,6 +4,7 @@ using UnityEngine;
 using Enums;
 using Interfaces;
 using System;
+using UnityEngine.UI;
 
 public class FriendlyOrigami : MonoBehaviour, IHittable
 {
@@ -12,8 +13,10 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
     public int attackSpeed;
     public CreatureType type;
     public float attackTimer;
-
+    public Text hitText;
     public float movementSpeed;
+
+    private GameObject canvas;
     private RaycastHit hit;
     private bool hitEnd = false;
 
@@ -30,6 +33,7 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
         if (attackTimer > 0)
         {
             attackTimer -= Time.deltaTime;
+            canvas = transform.GetChild(0).gameObject;
         }
 
         if (health <= 0)
@@ -112,5 +116,10 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
     public void TakeDamage(int damage)
     {
         health -= damage;
+        Text go = Instantiate(hitText, canvas.transform.position, hitText.rectTransform.rotation) as Text;
+        go.text = damage.ToString();
+        go.transform.SetParent(canvas.transform);
+        go.transform.localScale = new Vector3(1, 1, 1);
+        Destroy(go.gameObject, .3f);
     }
 }
