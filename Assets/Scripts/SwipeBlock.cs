@@ -11,9 +11,12 @@ public class SwipeBlock : MonoBehaviour {
     public GameObject selectedDot;
     public GameObject dotSet;
     public GameObject standardDotSet;
+    public PaperPile paperPile;
+    public GameObject selectedLane;
 
     void Start()
     {
+
         player = GameObject.Find("Main Camera").GetComponent<Player>();
         dotSet = gameObject.transform.GetChild(0).gameObject;
         foreach (Transform t in dotSet.transform)
@@ -39,8 +42,11 @@ public class SwipeBlock : MonoBehaviour {
                 SetNewDotSet(selectedDot.GetComponent<Dot>().dotSet);
             }else
             {
+                //Add selected lane
                 player.SpawnOrigami(selectedDot.GetComponent<Dot>().origami);
                 ResetDotSet();
+                paperPile.folding = false;
+                Destroy(gameObject);
             }
             selectedDot = null;
         }
