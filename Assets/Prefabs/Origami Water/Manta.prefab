@@ -129,7 +129,7 @@ MonoBehaviour:
   attackSpeed: 2
   type: 1
   attackTimer: 0
-  hitText: {fileID: 0}
+  hitText: {fileID: 114833006868138606, guid: 76505e51e26995a44a78713fb25ecea6, type: 2}
   movementSpeed: 3
 --- !u!114 &114545148961792786
 MonoBehaviour:
@@ -203,6 +203,6 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.46994352, y: 14.155486}
+  m_AnchoredPosition: {x: -0.019, y: 0.985}
   m_SizeDelta: {x: 35.491, y: 24.433}
   m_Pivot: {x: 0.5, y: 0.5}
