@@ -140,7 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d709422017fd8142a62d261e40dde0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStage: {fileID: 1102464845751606, guid: 05cdae511db0c274dbcd7c55e35c8771,
+  currentStage: {fileID: 1190941687106144, guid: 05cdae511db0c274dbcd7c55e35c8771,
     type: 2}
 --- !u!81 &995001622
 AudioListener:
