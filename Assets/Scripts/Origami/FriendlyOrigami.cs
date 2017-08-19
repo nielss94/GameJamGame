@@ -64,7 +64,7 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
             else if (hit.transform.CompareTag("EndHold") && hitEnd == false)
             {
                 hitEnd = true;
-                hit.transform.GetComponent<EndHold>().currentHold += 1;
+                hit.transform.parent.GetComponent<EndHold>().currentHold += 1;
             }
         }
         else
