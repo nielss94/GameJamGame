@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Name: Global Post Process Volume Profile
   m_EditorClassIdentifier: 
   settings:
-  - {fileID: 114599683272903836}
---- !u!114 &114599683272903836
+  - {fileID: 114570878636333112}
+--- !u!114 &114570878636333112
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
@@ -21,37 +21,31 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
-  m_Name: Vignette
+  m_Script: {fileID: 11500000, guid: b3f6f3f7c722b4544b97e3c75840aa33, type: 3}
+  m_Name: AutoExposure
   m_EditorClassIdentifier: 
   active: 1
   enabled:
     overrideState: 1
     value: 1
-  mode:
+  filtering:
+    overrideState: 0
+    value: {x: 50, y: 95}
+  minLuminance:
     overrideState: 0
     value: 0
-  color:
-    overrideState: 0
-    value: {r: 0, g: 0, b: 0, a: 1}
-  center:
-    overrideState: 0
-    value: {x: 0.5, y: 0.5}
-  intensity:
+  maxLuminance:
     overrideState: 0
     value: 0
-  smoothness:
-    overrideState: 0
-    value: 0.2
-  roundness:
+  keyValue:
     overrideState: 0
     value: 1
-  rounded:
+  eyeAdaptation:
     overrideState: 0
     value: 0
-  mask:
+  speedUp:
     overrideState: 0
-    value: {fileID: 0}
-  opacity:
+    value: 2
+  speedDown:
     overrideState: 0
     value: 1
