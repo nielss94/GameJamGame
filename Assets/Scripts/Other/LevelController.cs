@@ -21,13 +21,18 @@ public class LevelController : MonoBehaviour
         currentStage = go;
     }
 
-    public void ChangeStage(GameObject nextStage)
+    public void LoadLevel(GameObject level)
     {
         Destroy(currentStage);
-        GameObject go = Instantiate(nextStage, nextStage.transform.position, nextStage.transform.rotation) as GameObject;
-        stageNumber++;
+        GameObject go = Instantiate(level, level.transform.position, level.transform.rotation) as GameObject; 
+
         currentStage = go;
-        ResetOrigamiPos();
+
+    }
+
+    public void NextStage()
+    {
+       stageNumber++;
     }
 
     public void ResetOrigamiPos()

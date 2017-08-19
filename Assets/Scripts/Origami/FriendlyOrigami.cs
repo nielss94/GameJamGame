@@ -10,7 +10,7 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
 {
     public int attack;
     public int health;
-    public int attackSpeed;
+    public float attackSpeed;
     public CreatureType type;
     public float attackTimer;
     public Text hitText;
@@ -64,7 +64,7 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
             else if (hit.transform.CompareTag("EndHold") && hitEnd == false)
             {
                 hitEnd = true;
-                EndHold.instance.currentHold += 1;
+                hit.transform.GetComponent<EndHold>().currentHold += 1;
             }
         }
         else
