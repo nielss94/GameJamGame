@@ -84,13 +84,22 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1119158708387412
+GameObject:
+  m_ObjectHideFlags: 1
 --- !u!1 &1109686947973506
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
-  m_Component:
+  - component: {fileID: 224919594646140624}
+  - component: {fileID: 223276883360841242}
+  - component: {fileID: 114061782990430934}
+  - component: {fileID: 114157073516709058}
+  m_Layer: 5
+  m_Name: Canvas
+  m_TagString: Untagged
   - component: {fileID: 4198268394887946}
   - component: {fileID: 33831161763053926}
   - component: {fileID: 65626353151118586}
@@ -134,6 +143,7 @@ GameObject:
   m_Layer: 0
   m_Name: Lane3
   m_TagString: Lane
+  
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
