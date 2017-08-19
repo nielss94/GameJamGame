@@ -4,6 +4,7 @@ using UnityEngine;
 using Enums;
 using Interfaces;
 using System;
+using UnityEngine.UI;
 
 public class EnemyOrigami : MonoBehaviour, IHittable
 {
@@ -12,6 +13,10 @@ public class EnemyOrigami : MonoBehaviour, IHittable
     public int attackSpeed;
     public CreatureType type;
     public float attackTimer;
+    public Text hitText;
+    public GameObject hitParticle;
+
+    private GameObject canvas;
 
     private RaycastHit hit;
 
@@ -19,6 +24,7 @@ public class EnemyOrigami : MonoBehaviour, IHittable
     void Start ()
     {
         attackTimer = attackSpeed;
+        canvas = transform.GetChild(0).gameObject;
     }
 	
 	// Update is called once per frame
@@ -36,17 +42,29 @@ public class EnemyOrigami : MonoBehaviour, IHittable
 
         if (Physics.Raycast(transform.position, new Vector3(0, 0, -1), out hit))
         {
-            if (attackTimer <= 0)
+            if(Vector3.Distance(transform.position, hit.transform.position) < 2)
             {
-                Attack(hit.transform.GetComponent<FriendlyOrigami>());
-                attackTimer = attackSpeed;
-            }    
+                if (attackTimer <= 0)
+                {
+                    Attack(hit.transform.GetComponent<FriendlyOrigami>());
+                    attackTimer = attackSpeed;
+                }
+            }
+                
         }
     }
 
     public void TakeDamage(int damage)
     {
         health -= damage;
+        Text go = Instantiate(hitText, canvas.transform.position, hitText.rectTransform.rotation) as Text;
+        go.text = damage.ToString();
+        go.transform.SetParent(canvas.transform);
+        go.transform.localScale = new Vector3(1, 1, 1);
+        Destroy(go.gameObject, .3f);
+
+        GameObject particle = Instantiate(hitParticle, new Vector3(go.transform.position.x - 0.8f, go.transform.position.y - 1, go.transform.position.z - 1), hitParticle.transform.rotation) as GameObject;
+        Destroy(particle.gameObject, .3f);
     }
 
     void Attack(FriendlyOrigami enemy)
