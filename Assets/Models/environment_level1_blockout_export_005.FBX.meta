@@ -1,0 +1,165 @@
+fileFormatVersion: 2
+guid: ee20480f9657abb49a461890d5ae38cd
+timeCreated: 1503174889
+licenseType: Free
+ModelImporter:
+  serializedVersion: 21
+  fileIDToRecycleName:
+    100000: BO_Bridge
+    100002: BO_Lane1
+    100004: BO_Lane2
+    100006: BO_Lane3
+    100008: BO_LilyLeaf_01
+    100010: BO_LilyLeaf_02
+    100012: BO_LilyLeaf_03
+    100014: BO_LilyLeaf_04
+    100016: BO_LilyLeaf_05
+    100018: BO_LilyLeaf_06
+    100020: BO_rock1
+    100022: BO_rock2
+    100024: BO_rock3
+    100026: BO_rock4
+    100028: BO_stage1_water
+    100030: BO_stage2_gate
+    100032: //RootNode
+    400000: BO_Bridge
+    400002: BO_Lane1
+    400004: BO_Lane2
+    400006: BO_Lane3
+    400008: BO_LilyLeaf_01
+    400010: BO_LilyLeaf_02
+    400012: BO_LilyLeaf_03
+    400014: BO_LilyLeaf_04
+    400016: BO_LilyLeaf_05
+    400018: BO_LilyLeaf_06
+    400020: BO_rock1
+    400022: BO_rock2
+    400024: BO_rock3
+    400026: BO_rock4
+    400028: BO_stage1_water
+    400030: BO_stage2_gate
+    400032: //RootNode
+    2300000: BO_Bridge
+    2300002: BO_Lane1
+    2300004: BO_Lane2
+    2300006: BO_Lane3
+    2300008: BO_LilyLeaf_01
+    2300010: BO_LilyLeaf_02
+    2300012: BO_LilyLeaf_03
+    2300014: BO_LilyLeaf_04
+    2300016: BO_LilyLeaf_05
+    2300018: BO_LilyLeaf_06
+    2300020: BO_rock1
+    2300022: BO_rock2
+    2300024: BO_rock3
+    2300026: BO_rock4
+    2300028: BO_stage1_water
+    2300030: BO_stage2_gate
+    3300000: BO_Bridge
+    3300002: BO_Lane1
+    3300004: BO_Lane2
+    3300006: BO_Lane3
+    3300008: BO_LilyLeaf_01
+    3300010: BO_LilyLeaf_02
+    3300012: BO_LilyLeaf_03
+    3300014: BO_LilyLeaf_04
+    3300016: BO_LilyLeaf_05
+    3300018: BO_LilyLeaf_06
+    3300020: BO_rock1
+    3300022: BO_rock2
+    3300024: BO_rock3
+    3300026: BO_rock4
+    3300028: BO_stage1_water
+    3300030: BO_stage2_gate
+    4300000: BO_Lane3
+    4300002: BO_Lane2
+    4300004: BO_rock3
+    4300006: BO_Bridge
+    4300008: BO_stage1_water
+    4300010: BO_LilyLeaf_01
+    4300012: BO_LilyLeaf_02
+    4300014: BO_LilyLeaf_03
+    4300016: BO_LilyLeaf_04
+    4300018: BO_LilyLeaf_05
+    4300020: BO_LilyLeaf_06
+    4300022: BO_rock4
+    4300024: BO_rock1
+    4300026: BO_rock2
+    4300028: BO_stage2_gate
+    4300030: BO_Lane1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
