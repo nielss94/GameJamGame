@@ -1,17 +1,19 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class EndHold : MonoBehaviour
 {
-    public static EndHold instance;
     public int currentHold;
     public GameObject nextLevel;
+    public GameObject endScreen;
+
 
 	// Use this for initialization
 	void Start ()
     {
-        instance = this;
         currentHold = 0;
 	}
 	
@@ -22,13 +24,20 @@ public class EndHold : MonoBehaviour
         {
             if(nextLevel != null)
             {
-                LevelController.instance.ChangeStage(nextLevel);
+                Debug.Log("LEVEL COMPLETE!");
+                GameObject go = Instantiate(endScreen) as GameObject;
+                go.GetComponent<ScreenCanvas>().customText.text = "YOU WIN!";
+                go.GetComponent<ScreenCanvas>().optionButton.transform.GetChild(0).GetComponent<Text>().text = "Next level";
+                go.GetComponent<ScreenCanvas>().optionButton.onClick.AddListener(() => LevelController.instance.LoadLevel(nextLevel));
+                currentHold = 0;
             }else
             {
-                Debug.Log("LEVEL COMPLETE!");
-
+                Destroy(gameObject);
+                LevelController.instance.NextStage();
             }
             
         }
 	}
+
+    
 }
