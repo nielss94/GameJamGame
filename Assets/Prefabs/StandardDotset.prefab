@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 23206369717040568}
   - component: {fileID: 114229303070139152}
   m_Layer: 0
-  m_Name: WaterSpeed
+  m_Name: Water
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,7 +43,7 @@ GameObject:
   - component: {fileID: 23757274423920612}
   - component: {fileID: 114907074644984530}
   m_Layer: 0
-  m_Name: WaterAttack
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -62,7 +62,7 @@ GameObject:
   - component: {fileID: 23551458999692512}
   - component: {fileID: 114802104941080230}
   m_Layer: 0
-  m_Name: WaterHP
+  m_Name: Flying
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77,7 +77,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4257674492245284}
   m_Layer: 0
-  m_Name: WaterDotSet
+  m_Name: StandardDotset
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -308,7 +308,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28ac64146e032a45be3a852bc943090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dotSet: {fileID: 0}
+  dotSet: {fileID: 1817005814528728, guid: d1043ca98bd14794a8db63516eaf507c, type: 2}
+  origami: 0
 --- !u!114 &114802104941080230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -320,7 +321,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28ac64146e032a45be3a852bc943090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dotSet: {fileID: 0}
+  dotSet: {fileID: 1817005814528728, guid: 8f00a5c5ae1d6c9449e2b80dcc265508, type: 2}
+  origami: 0
 --- !u!114 &114907074644984530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -332,4 +334,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d28ac64146e032a45be3a852bc943090, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dotSet: {fileID: 0}
+  dotSet: {fileID: 1817005814528728, guid: 5ebdc911d5df67e49b2d34eed37e9323, type: 2}
+  origami: 0

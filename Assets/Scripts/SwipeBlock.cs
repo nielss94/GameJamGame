@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class SwipeBlock : MonoBehaviour {
     
-
     private Vector3 lp;
-    private Vector3 fp;
     public List<GameObject> connectDots;
     private Player player;
     public bool selected;
     public GameObject selectedDot;
     public GameObject dotSet;
+    public GameObject standardDotSet;
 
     void Start()
     {
@@ -35,7 +34,14 @@ public class SwipeBlock : MonoBehaviour {
         if (selectedDot != null)
         {
             Debug.Log("Release with selected dot: " + selectedDot.transform.name);
-            SetNewDotSet(selectedDot.GetComponent<Dot>().dotSet);
+            if (selectedDot.GetComponent<Dot>().HasDotSet())
+            {
+                SetNewDotSet(selectedDot.GetComponent<Dot>().dotSet);
+            }else
+            {
+                player.SpawnOrigami(selectedDot.GetComponent<Dot>().origami);
+                ResetDotSet();
+            }
             selectedDot = null;
         }
         else
@@ -52,11 +58,7 @@ public class SwipeBlock : MonoBehaviour {
             if (Input.touchCount == 1)
             {
                 Touch touch = Input.GetTouch(0); 
-                if(touch.phase == TouchPhase.Began)
-                {
-                    fp = touch.position;
-                }
-                else if (touch.phase == TouchPhase.Moved) 
+                if (touch.phase == TouchPhase.Moved) 
                 {
                     lp = touch.position;
                     GameObject dot = null;
@@ -105,4 +107,20 @@ public class SwipeBlock : MonoBehaviour {
         }
     }
     
+    void ResetDotSet()
+    {
+        if (dotSet != null)
+        {
+            Destroy(dotSet);
+        }
+        GameObject go = Instantiate(standardDotSet, standardDotSet.transform.position, standardDotSet.transform.rotation) as GameObject;
+        go.transform.SetParent(transform, false);
+        dotSet = go;
+
+        connectDots.Clear();
+        foreach (Transform t in dotSet.transform)
+        {
+            connectDots.Add(t.gameObject);
+        }
+    }
 }
