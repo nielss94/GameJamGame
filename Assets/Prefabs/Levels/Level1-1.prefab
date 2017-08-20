@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 33299815415170238}
   - component: {fileID: 64002201410496122}
   - component: {fileID: 23176334929296612}
+  - component: {fileID: 114191588095636246}
   m_Layer: 0
   m_Name: Level1-1
   m_TagString: Untagged
@@ -222,6 +223,21 @@ GameObject:
   m_Layer: 0
   m_Name: Enemy1Stage1
   m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1355807819742624
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4209882737200190}
+  m_Layer: 0
+  m_Name: CameraPosStage2
+  m_TagString: CameraPos
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -381,6 +397,21 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1644481067774782
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4956128760654930}
+  m_Layer: 0
+  m_Name: CameraPosStage1
+  m_TagString: CameraPos
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1656362296496356
 GameObject:
   m_ObjectHideFlags: 1
@@ -411,6 +442,21 @@ GameObject:
   m_Layer: 0
   m_Name: Enemy3Stage3
   m_TagString: Enemy
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1665161973468992
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4910090091285888}
+  m_Layer: 0
+  m_Name: CameraPositions
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -623,6 +669,34 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1983376670184162
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4037910311109976}
+  m_Layer: 0
+  m_Name: CameraPosStage3
+  m_TagString: CameraPos
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4037910311109976
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1983376670184162}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.6, y: 8.8, z: 3.25}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4910090091285888}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4088913627587644
 Transform:
   m_ObjectHideFlags: 1
@@ -656,6 +730,19 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4088913627587644}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4209882737200190
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355807819742624}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 19.6, y: 8.8, z: -0.16}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4910090091285888}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4287861769554820
@@ -738,6 +825,7 @@ Transform:
   - {fileID: 4887406184030870}
   - {fileID: 4954194520962634}
   - {fileID: 4088913627587644}
+  - {fileID: 4910090091285888}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
@@ -941,6 +1029,22 @@ Transform:
   m_Father: {fileID: 4453162864901874}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4910090091285888
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1665161973468992}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4209882737200190}
+  - {fileID: 4037910311109976}
+  - {fileID: 4956128760654930}
+  m_Father: {fileID: 4453162864901874}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4932349059026774
 Transform:
   m_ObjectHideFlags: 1
@@ -980,6 +1084,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4453162864901874}
   m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4956128760654930
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1644481067774782}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 19.6, y: 8.8, z: -3.17}
+  m_LocalScale: {x: 1.0000004, y: 1.0000001, z: 1.0000008}
+  m_Children: []
+  m_Father: {fileID: 4910090091285888}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4957851239316352
 Transform:
@@ -1846,7 +1963,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHold: 0
-  nextLevel: {fileID: 0}
+  nextLevel: {fileID: 1190941687106144, guid: 7feff2edae7151b4fbf4dda68857bb7b, type: 2}
+  endScreen: {fileID: 1625022183463946, guid: 89512222d13d6d945b447bc304607c15, type: 2}
 --- !u!114 &114061416036550406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1882,6 +2000,19 @@ MonoBehaviour:
   hitText: {fileID: 114833006868138606, guid: d806f44f75f7db7498ee9a9325606641, type: 2}
   hitParticle: {fileID: 1810642158423664, guid: de142ae8379738f4b90c67291e7d22f3,
     type: 2}
+--- !u!114 &114191588095636246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190941687106144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c6fc685d83fc94bbe0a8eb13cabde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Old level 1
+  papers: 3
 --- !u!114 &114235248344448846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1949,6 +2080,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHold: 0
   nextLevel: {fileID: 0}
+  endScreen: {fileID: 0}
 --- !u!114 &114334408914702400
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2077,6 +2209,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentHold: 0
   nextLevel: {fileID: 0}
+  endScreen: {fileID: 0}
 --- !u!114 &114629748617661664
 MonoBehaviour:
   m_ObjectHideFlags: 1

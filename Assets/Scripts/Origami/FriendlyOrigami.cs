@@ -10,7 +10,7 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
 {
     public int attack;
     public int health;
-    public int attackSpeed;
+    public float attackSpeed;
     public CreatureType type;
     public float attackTimer;
     public Text hitText;
@@ -36,10 +36,7 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
             canvas = transform.GetChild(0).gameObject;
         }
 
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
+        
         
 	}
 
@@ -64,7 +61,7 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
             else if (hit.transform.CompareTag("EndHold") && hitEnd == false)
             {
                 hitEnd = true;
-                EndHold.instance.currentHold += 1;
+                hit.transform.parent.GetComponent<EndHold>().currentHold += 1;
             }
         }
         else
@@ -120,5 +117,10 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
         go.transform.SetParent(canvas.transform);
         go.transform.localScale = new Vector3(1, 1, 1);
         Destroy(go.gameObject, .3f);
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+            GameController.instance.StartCoroutine(GameController.instance.CheckIfLoss());
+        }
     }
 }

@@ -33,7 +33,7 @@ public class Paper : MonoBehaviour {
         if (selectedLane != null)
         {
             paperPile.folding = true;
-            GameObject go = Instantiate(swipeBlock, swipeBlock.transform.position, swipeBlock.transform.rotation) as GameObject;
+            GameObject go = Instantiate(swipeBlock, new Vector3(Camera.main.transform.position.x, Camera.main.transform.position.y - 7.5F, Camera.main.transform.position.z + 7.5F), swipeBlock.transform.rotation) as GameObject;
             go.GetComponent<SwipeBlock>().selectedLane = selectedLane;
             go.GetComponent<SwipeBlock>().paperPile = paperPile;
             selectedLane.GetComponent<MeshRenderer>().material.color = Color.white;

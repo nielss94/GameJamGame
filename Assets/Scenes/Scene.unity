@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paper: {fileID: 1076660789698656, guid: 2eaad0f8076ad524dacd63fc3c2289f9, type: 2}
   currentPaper: {fileID: 0}
-  paperStock: 3
+  paperStock: 0
   folding: 0
 --- !u!23 &185848983
 MeshRenderer:
@@ -361,6 +361,7 @@ GameObject:
   - component: {fileID: 1958655555}
   - component: {fileID: 1958655560}
   - component: {fileID: 1958655561}
+  - component: {fileID: 1958655562}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -432,7 +433,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1958655554}
   m_LocalRotation: {x: 0.21813716, y: -0.0000001490116, z: -0.0000000037252899, w: 0.9759181}
-  m_LocalPosition: {x: -23.8, y: 9, z: -13.7}
+  m_LocalPosition: {x: -23.8, y: 10.2, z: -17.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 185848986}
@@ -450,7 +451,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d709422017fd8142a62d261e40dde0b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStage: {fileID: 1190941687106144, guid: 05cdae511db0c274dbcd7c55e35c8771,
+  currentStage: {fileID: 1580727060952948, guid: 0a27e311aa4b3e1468d781b657797a5e,
     type: 2}
   stageNumber: 0
 --- !u!114 &1958655561
@@ -474,3 +475,15 @@ MonoBehaviour:
   manta: {fileID: 1027787323920516, guid: 070304d65e5d74f45a70e942444f9a0d, type: 2}
   shark: {fileID: 1027787323920516, guid: 6bf7b3769f97bda4c84d6129977e34ba, type: 2}
   turtle: {fileID: 1027787323920516, guid: dca8003911745694ea9632e6fadd99ac, type: 2}
+--- !u!114 &1958655562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958655554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ec194586f5b58544b44b9b51cd37503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cameraPositions: []

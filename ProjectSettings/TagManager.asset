@@ -8,6 +8,7 @@ TagManager:
   - EndHold
   - Friendly
   - Lane
+  - CameraPos
   layers:
   - Default
   - TransparentFX
