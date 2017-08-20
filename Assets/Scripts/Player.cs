@@ -45,8 +45,6 @@ public class Player : MonoBehaviour {
                 s += "Stage3";
                 break;
         }
-        Debug.Log(s);
-
         switch (origami)
         {
             case Origami.Crane:

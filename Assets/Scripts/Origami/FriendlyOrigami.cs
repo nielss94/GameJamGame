@@ -19,10 +19,14 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
     private GameObject canvas;
     private RaycastHit hit;
     private bool hitEnd = false;
+    private AudioSource audioSource;
+    public AudioClip paperHit;
+    public AudioClip dieClip;
 
-	// Use this for initialization
-	void Start ()
+    // Use this for initialization
+    void Start ()
     {
+        audioSource = GetComponent<AudioSource>();
         attackTimer = attackSpeed;
 	}
 	
@@ -111,6 +115,7 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
 
     public void TakeDamage(int damage)
     {
+        audioSource.PlayOneShot(paperHit);
         health -= damage;
         Text go = Instantiate(hitText, canvas.transform.position, hitText.rectTransform.rotation) as Text;
         go.text = damage.ToString();
@@ -119,7 +124,10 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
         Destroy(go.gameObject, .3f);
         if (health <= 0)
         {
-            Destroy(gameObject);
+            audioSource.PlayOneShot(dieClip);
+            transform.GetChild(1).GetComponent<Renderer>().enabled = false;
+            GetComponent<Collider>().enabled = false;
+            Destroy(gameObject, 0.5f);
             GameController.instance.StartCoroutine(GameController.instance.CheckIfLoss());
         }
     }

@@ -109,3 +109,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dotSet: {fileID: 0}
   origami: 0
+  animatingObject: {fileID: 0}
+  dotDolor: {r: 0.17647058, g: 0.59107524, b: 1, a: 0}

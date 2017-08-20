@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PaperPile : MonoBehaviour {
 
@@ -8,11 +9,17 @@ public class PaperPile : MonoBehaviour {
     public GameObject currentPaper;
     public int paperStock;
     public bool folding;
+    public Text papersLeft;
 
 	// Use this for initialization
 	void Start () {
 		
 	}
+
+    void Update()
+    {
+        papersLeft.text = paperStock.ToString();
+    }
 	
 	void OnMouseDown()
     {
