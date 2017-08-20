@@ -140,7 +140,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   paper: {fileID: 1076660789698656, guid: 2eaad0f8076ad524dacd63fc3c2289f9, type: 2}
   currentPaper: {fileID: 0}
-  paperStock: 1
+  paperStock: 0
   folding: 0
 --- !u!23 &185848983
 MeshRenderer:
@@ -362,7 +362,6 @@ GameObject:
   - component: {fileID: 1958655560}
   - component: {fileID: 1958655561}
   - component: {fileID: 1958655562}
-  - component: {fileID: 1958655563}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -488,14 +487,3 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraPositions: []
---- !u!114 &1958655563
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1958655554}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a205964fd71dbb347a96d5bfa0f1e5c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
