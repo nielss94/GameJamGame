@@ -19,10 +19,14 @@ public class EnemyOrigami : MonoBehaviour, IHittable
     private GameObject canvas;
 
     private RaycastHit hit;
+    private AudioSource audioSource;
+    public AudioClip paperHit;
+    public AudioClip dieClip;
 
     // Use this for initialization
     void Start ()
     {
+        audioSource = GetComponent<AudioSource>();
         attackTimer = attackSpeed;
         canvas = transform.GetChild(0).gameObject;
     }
@@ -30,10 +34,7 @@ public class EnemyOrigami : MonoBehaviour, IHittable
 	// Update is called once per frame
 	void Update ()
     {
-		if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
+		
 
         if (attackTimer > 0)
         {
@@ -56,6 +57,7 @@ public class EnemyOrigami : MonoBehaviour, IHittable
 
     public void TakeDamage(int damage)
     {
+        audioSource.PlayOneShot(paperHit);
         health -= damage;
         Text go = Instantiate(hitText, canvas.transform.position, hitText.rectTransform.rotation) as Text;
         go.text = damage.ToString();
@@ -65,6 +67,14 @@ public class EnemyOrigami : MonoBehaviour, IHittable
 
         GameObject particle = Instantiate(hitParticle, new Vector3(go.transform.position.x - 0.8f, go.transform.position.y - 1, go.transform.position.z - 1), hitParticle.transform.rotation) as GameObject;
         Destroy(particle.gameObject, .3f);
+
+        if (health <= 0)
+        {
+            audioSource.PlayOneShot(dieClip);
+            transform.GetChild(1).GetComponent<Renderer>().enabled = false;
+            GetComponent<Collider>().enabled = false;
+            Destroy(gameObject, 0.5f);
+        }
     }
 
     void Attack(FriendlyOrigami enemy)

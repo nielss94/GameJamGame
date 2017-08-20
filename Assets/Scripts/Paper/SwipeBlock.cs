@@ -24,6 +24,7 @@ public class SwipeBlock : MonoBehaviour {
             connectDots.Add(t.gameObject);
         }
     }
+    
 
     void OnMouseDown()
     {
@@ -79,6 +80,7 @@ public class SwipeBlock : MonoBehaviour {
 
     void Update()
     {
+        transform.parent.position = new Vector3(Camera.main.transform.position.x + 7.5f, Camera.main.transform.position.y - 2.5f, Camera.main.transform.position.z + 7.5F);
         if (selected)
         {
             if (Input.GetKey(KeyCode.Mouse0))
@@ -94,14 +96,14 @@ public class SwipeBlock : MonoBehaviour {
                        
                         Vector2 goPos = player.GetComponent<Camera>().WorldToScreenPoint(go.transform.position);
                         
-                        if (Vector2.Distance(lp, new Vector2(goPos.x, goPos.y)) < 30)
+                        if (Vector2.Distance(lp, new Vector2(goPos.x, goPos.y)) < 60)
                         {
-                            go.GetComponent<MeshRenderer>().material.color = Color.red;
+                            go.GetComponent<MeshRenderer>().material.color = Color.green;
                             dot = go;
                         }
                         else
                         {
-                            go.GetComponent<MeshRenderer>().material.color = Color.white;
+                            go.GetComponent<MeshRenderer>().material.color = go.GetComponent<Dot>().dotDolor;
                         }
                         
                     }
