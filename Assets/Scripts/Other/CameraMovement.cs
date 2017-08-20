@@ -8,14 +8,22 @@ public class CameraMovement : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        cameraPositions = GameObject.FindGameObjectsWithTag("CameraPos");
+        Invoke("GetCameraPositions", 1);   
 	}
+    
 	
 	// Update is called once per frame
 	void Update () {
-        transform.position = Vector3.Lerp(transform.position, 
-            new Vector3(GameObject.Find("CameraPosStage" + LevelController.instance.stageNumber).transform.position.x, 
-            transform.position.y, transform.position.z), 1 * Time.deltaTime);
-
+        if(cameraPositions.Length > 0)
+        {
+            transform.position = Vector3.Lerp(transform.position,
+           new Vector3(GameObject.Find("CameraPosStage" + LevelController.instance.stageNumber).transform.position.x,
+           transform.position.y, transform.position.z), 1 * Time.deltaTime);
+        }
 	}
+
+    void GetCameraPositions()
+    {
+        cameraPositions = GameObject.FindGameObjectsWithTag("CameraPos");
+    }
 }

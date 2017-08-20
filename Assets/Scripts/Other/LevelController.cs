@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelController : MonoBehaviour
 {
@@ -12,35 +13,26 @@ public class LevelController : MonoBehaviour
     {
         stageNumber = 1;
         instance = this;
-        StartLevel();
     }
 
-    public void StartLevel()
+    public void StartLevel(GameObject level)
     {
-        GameObject go = Instantiate(currentStage, currentStage.transform.position, currentStage.transform.rotation) as GameObject;
+        GameObject go = Instantiate(level, level.transform.position, level.transform.rotation) as GameObject;
         currentStage = go;
     }
 
     public void LoadLevel(GameObject level)
     {
         Destroy(currentStage);
-        GameObject go = Instantiate(level, level.transform.position, level.transform.rotation) as GameObject; 
+        GameObject go = Instantiate(level, level.transform.position, level.transform.rotation) as GameObject;
 
         currentStage = go;
-
     }
+    
 
     public void NextStage()
     {
        stageNumber++;
     }
-
-    public void ResetOrigamiPos()
-    {
-        GameObject[] allOrigamis = GameObject.FindGameObjectsWithTag("Friendly");
-        foreach(GameObject go in allOrigamis)
-        {
-            go.transform.position = new Vector3(go.transform.position.x, go.transform.position.y, go.transform.position.z - 20);
-        }
-    }
+    
 }

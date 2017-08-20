@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 33299815415170238}
   - component: {fileID: 64002201410496122}
   - component: {fileID: 23176334929296612}
+  - component: {fileID: 114115184030540428}
   m_Layer: 0
   m_Name: Level1-2
   m_TagString: Untagged
@@ -1864,6 +1865,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &114115184030540428
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190941687106144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c6fc685d83fc94bbe0a8eb13cabde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Dennis
+  papers: 32
 --- !u!114 &114124193678307434
 MonoBehaviour:
   m_ObjectHideFlags: 1

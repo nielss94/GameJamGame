@@ -129,6 +129,7 @@ GameObject:
   - component: {fileID: 33299815415170238}
   - component: {fileID: 64002201410496122}
   - component: {fileID: 23176334929296612}
+  - component: {fileID: 114191588095636246}
   m_Layer: 0
   m_Name: Level1-1
   m_TagString: Untagged
@@ -1999,6 +2000,19 @@ MonoBehaviour:
   hitText: {fileID: 114833006868138606, guid: d806f44f75f7db7498ee9a9325606641, type: 2}
   hitParticle: {fileID: 1810642158423664, guid: de142ae8379738f4b90c67291e7d22f3,
     type: 2}
+--- !u!114 &114191588095636246
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1190941687106144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36c6fc685d83fc94bbe0a8eb13cabde8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  levelName: Old level 1
+  papers: 3
 --- !u!114 &114235248344448846
 MonoBehaviour:
   m_ObjectHideFlags: 1
