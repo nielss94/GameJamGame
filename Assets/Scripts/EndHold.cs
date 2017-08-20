@@ -26,9 +26,10 @@ public class EndHold : MonoBehaviour
             {
                 Debug.Log("LEVEL COMPLETE!");
                 GameObject go = Instantiate(endScreen) as GameObject;
+                go.transform.parent = transform;
                 go.GetComponent<ScreenCanvas>().customText.text = "YOU WIN!";
                 go.GetComponent<ScreenCanvas>().optionButton.transform.GetChild(0).GetComponent<Text>().text = "Next level";
-                go.GetComponent<ScreenCanvas>().optionButton.onClick.AddListener(() => LevelController.instance.LoadLevel(nextLevel));
+                go.GetComponent<ScreenCanvas>().optionButton.onClick.AddListener(() => GameController.instance.StartCoroutine(GameController.instance.LoadLevel(nextLevel)));
                 currentHold = 0;
             }else
             {

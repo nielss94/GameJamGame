@@ -20,14 +20,6 @@ public class LevelController : MonoBehaviour
         GameObject go = Instantiate(level, level.transform.position, level.transform.rotation) as GameObject;
         currentStage = go;
     }
-
-    public void LoadLevel(GameObject level)
-    {
-        Destroy(currentStage);
-        GameObject go = Instantiate(level, level.transform.position, level.transform.rotation) as GameObject;
-
-        currentStage = go;
-    }
     
 
     public void NextStage()
