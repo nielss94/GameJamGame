@@ -214,7 +214,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attack: 10
   health: 150
-  attackSpeed: 5
+  attackSpeed: 3
   type: 1
   attackTimer: 0
   hitText: {fileID: 114833006868138606, guid: 76505e51e26995a44a78713fb25ecea6, type: 2}
