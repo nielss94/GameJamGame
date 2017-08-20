@@ -23870,8 +23870,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1276848118806436}
   m_LocalRotation: {x: -0.00000005960463, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.77153397, y: -4.607752, z: 3.38}
-  m_LocalScale: {x: 0.8134865, y: 1.5179636, z: 0.47551376}
+  m_LocalPosition: {x: -0.77153397, y: -2.2842045, z: 3.380001}
+  m_LocalScale: {x: 0.8134865, y: 0.82740486, z: 0.47551417}
   m_Children:
   - {fileID: 4516826665040158}
   - {fileID: 4393174379965320}
@@ -26083,8 +26083,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1913881262024160}
   m_LocalRotation: {x: 0.7071058, y: -0, z: -0, w: 0.70710784}
-  m_LocalPosition: {x: -0.899, y: -0, z: 0.355}
-  m_LocalScale: {x: 0.39126977, y: 0.28168783, z: 0.35968825}
+  m_LocalPosition: {x: -0.899, y: -0, z: 0.2375}
+  m_LocalScale: {x: 0.39126977, y: 0.5167873, z: 0.35968825}
   m_Children:
   - {fileID: 4753909893905324}
   m_Father: {fileID: 4730120131600746}
@@ -27039,7 +27039,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8c4516f3425f63f4c87d61c6bc81aedb, type: 2}
+  - {fileID: 2100000, guid: 0a150f9bee217e3438cfbeb0c978a622, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27103,7 +27103,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8c4516f3425f63f4c87d61c6bc81aedb, type: 2}
+  - {fileID: 2100000, guid: 04512b6016f0be246815e895ca604ea1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27135,7 +27135,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8c4516f3425f63f4c87d61c6bc81aedb, type: 2}
+  - {fileID: 2100000, guid: eef10dde5568bc549b3d9c631b8c1600, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27253,6 +27253,7 @@ MonoBehaviour:
   origami: 0
   animatingObject: {fileID: 1276867892253078, guid: b286d9d61ada6314098e281f1cdf63c7,
     type: 2}
+  dotDolor: {r: 0.08088237, g: 0.5816431, b: 1, a: 0}
 --- !u!114 &114533076788672808
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27268,6 +27269,7 @@ MonoBehaviour:
   origami: 0
   animatingObject: {fileID: 1601085049539984, guid: 042de30934899174dbfc9d07ca2d9a1d,
     type: 2}
+  dotDolor: {r: 0.006650093, g: 0.9044118, b: 0.9044118, a: 0}
 --- !u!114 &114694514457984450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27283,6 +27285,7 @@ MonoBehaviour:
   origami: 0
   animatingObject: {fileID: 1114861992842616, guid: 098ba4265d0dab645a1295067b54782e,
     type: 2}
+  dotDolor: {r: 0.35294116, g: 0.1387424, b: 0, a: 0}
 --- !u!114 &114945144605084586
 MonoBehaviour:
   m_ObjectHideFlags: 1

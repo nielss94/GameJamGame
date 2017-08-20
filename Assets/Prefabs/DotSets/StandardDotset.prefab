@@ -151,7 +151,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8c4516f3425f63f4c87d61c6bc81aedb, type: 2}
+  - {fileID: 2100000, guid: 04512b6016f0be246815e895ca604ea1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -183,7 +183,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8c4516f3425f63f4c87d61c6bc81aedb, type: 2}
+  - {fileID: 2100000, guid: eef10dde5568bc549b3d9c631b8c1600, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -215,7 +215,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 8c4516f3425f63f4c87d61c6bc81aedb, type: 2}
+  - {fileID: 2100000, guid: 0a150f9bee217e3438cfbeb0c978a622, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -312,6 +312,7 @@ MonoBehaviour:
   origami: 0
   animatingObject: {fileID: 1276867892253078, guid: b286d9d61ada6314098e281f1cdf63c7,
     type: 2}
+  dotDolor: {r: 0.11764705, g: 0.56186587, b: 1, a: 0}
 --- !u!114 &114802104941080230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -327,6 +328,7 @@ MonoBehaviour:
   origami: 0
   animatingObject: {fileID: 1601085049539984, guid: 042de30934899174dbfc9d07ca2d9a1d,
     type: 2}
+  dotDolor: {r: 0.013732712, g: 0.9338235, b: 0.7434597, a: 0}
 --- !u!114 &114907074644984530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -342,3 +344,4 @@ MonoBehaviour:
   origami: 0
   animatingObject: {fileID: 1114861992842616, guid: 098ba4265d0dab645a1295067b54782e,
     type: 2}
+  dotDolor: {r: 0.42647058, g: 0.22058822, b: 0, a: 0}
