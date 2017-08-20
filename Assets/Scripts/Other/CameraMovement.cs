@@ -22,7 +22,7 @@ public class CameraMovement : MonoBehaviour {
         }
 	}
 
-    void GetCameraPositions()
+    public void GetCameraPositions()
     {
         cameraPositions = GameObject.FindGameObjectsWithTag("CameraPos");
     }
