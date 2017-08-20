@@ -81,12 +81,13 @@ public class SwipeBlock : MonoBehaviour {
     {
         if (selected)
         {
-            if (Input.touchCount == 1)
+            if (Input.GetKey(KeyCode.Mouse0))
             {
-                Touch touch = Input.GetTouch(0); 
-                if (touch.phase == TouchPhase.Moved) 
-                {
-                    lp = touch.position;
+              //  Touch touch = Input.GetTouch(0); 
+               // if (touch.phase == TouchPhase.Moved) 
+               // {
+                    lp = Input.mousePosition;
+                    //lp = touch.position;
                     GameObject dot = null;
                     foreach (GameObject go in connectDots)
                     {
@@ -111,7 +112,7 @@ public class SwipeBlock : MonoBehaviour {
                     {
                         selectedDot = null;
                     }
-                }
+              //  }
             }
         }
     }
