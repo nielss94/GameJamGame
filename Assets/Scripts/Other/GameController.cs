@@ -30,4 +30,15 @@ public class GameController : MonoBehaviour {
         LevelController.instance.StartLevel(level);
         GameObject.Find("PaperPile").GetComponent<PaperPile>().paperStock = level.GetComponent<Level>().papers;
     }
+
+
+    public IEnumerator DeactivateObjectForSeconds(GameObject g, float t)
+    {
+        Debug.Log("turn off");
+        g.SetActive(false);
+        yield return new WaitForSeconds(t);
+
+        Debug.Log("turn on");
+        g.SetActive(true);
+    }
 }

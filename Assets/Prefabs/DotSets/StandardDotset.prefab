@@ -90,7 +90,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1817005814528728}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.0021672482, y: 1.3904532, z: 3.4332063}
+  m_LocalPosition: {x: 0.0021672482, y: -4.59, z: 3.38}
   m_LocalScale: {x: 0.32508728, y: 1.5179621, z: 0.47551334}
   m_Children:
   - {fileID: 4410564242761310}
@@ -310,6 +310,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dotSet: {fileID: 1817005814528728, guid: d1043ca98bd14794a8db63516eaf507c, type: 2}
   origami: 0
+  animatingObject: {fileID: 1276867892253078, guid: b286d9d61ada6314098e281f1cdf63c7,
+    type: 2}
 --- !u!114 &114802104941080230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -323,6 +325,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dotSet: {fileID: 1817005814528728, guid: 8f00a5c5ae1d6c9449e2b80dcc265508, type: 2}
   origami: 0
+  animatingObject: {fileID: 1601085049539984, guid: 042de30934899174dbfc9d07ca2d9a1d,
+    type: 2}
 --- !u!114 &114907074644984530
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -336,3 +340,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dotSet: {fileID: 1817005814528728, guid: 5ebdc911d5df67e49b2d34eed37e9323, type: 2}
   origami: 0
+  animatingObject: {fileID: 1114861992842616, guid: 098ba4265d0dab645a1295067b54782e,
+    type: 2}
