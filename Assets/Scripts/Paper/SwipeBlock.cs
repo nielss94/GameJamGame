@@ -13,6 +13,7 @@ public class SwipeBlock : MonoBehaviour {
     public GameObject standardDotSet;
     public PaperPile paperPile;
     public GameObject selectedLane;
+    public GameObject handsAnimation;
 
     void Start()
     {
@@ -63,8 +64,7 @@ public class SwipeBlock : MonoBehaviour {
                 GameController.instance.StartCoroutine(GameController.instance.DeactivateObjectForSeconds(transform.parent.gameObject, 1));
             }else
             {
-                //Add selected lane
-                player.SpawnOrigami(selectedDot.GetComponent<Dot>().origami, selectedLane, LevelController.instance.stageNumber);
+                GameController.instance.StartCoroutine(GameController.instance.SpawnOrigami(selectedDot.GetComponent<Dot>().origami, selectedLane, handsAnimation));
                 ResetDotSet();
                 paperPile.folding = false;
                 Destroy(transform.parent.gameObject);
@@ -77,6 +77,7 @@ public class SwipeBlock : MonoBehaviour {
         }
         player.selectedPiece = null;
     }
+    
 
     void Update()
     {

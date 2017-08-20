@@ -275,7 +275,7 @@ Animator:
   m_GameObject: {fileID: 1480705277925372}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 08ab8eeb77e611a43993cdf979a4e08a, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a49a13877e6c1e458a26159699a1ea7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -303,6 +303,7 @@ MonoBehaviour:
   movementSpeed: 3
   paperHit: {fileID: 8300000, guid: 1ff5f7fde0fbeb44bb6511f057b1bec7, type: 3}
   dieClip: {fileID: 8300000, guid: f7439d0f09acf504da834da61fe48a6d, type: 3}
+  animator: {fileID: 0}
 --- !u!114 &114281119369690936
 MonoBehaviour:
   m_ObjectHideFlags: 1

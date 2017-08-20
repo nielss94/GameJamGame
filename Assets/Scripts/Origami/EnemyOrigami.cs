@@ -22,10 +22,12 @@ public class EnemyOrigami : MonoBehaviour, IHittable
     private AudioSource audioSource;
     public AudioClip paperHit;
     public AudioClip dieClip;
+    private Animator animator;
 
     // Use this for initialization
     void Start ()
     {
+        animator = transform.GetChild(1).GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         attackTimer = attackSpeed;
         canvas = transform.GetChild(0).gameObject;
@@ -47,12 +49,20 @@ public class EnemyOrigami : MonoBehaviour, IHittable
             {
                 if (attackTimer <= 0)
                 {
+                    StartCoroutine(WaitAndSetFalse("Attacking"));
                     Attack(hit.transform.GetComponent<FriendlyOrigami>());
                     attackTimer = attackSpeed;
                 }
             }
                 
         }
+    }
+
+    IEnumerator WaitAndSetFalse(string animName)
+    {
+        animator.SetBool(animName, true);
+        yield return new WaitForSeconds(0.2f);
+        animator.SetBool(animName, false);
     }
 
     public void TakeDamage(int damage)

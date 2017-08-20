@@ -22,10 +22,12 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
     private AudioSource audioSource;
     public AudioClip paperHit;
     public AudioClip dieClip;
+    public Animator animator;
 
     // Use this for initialization
     void Start ()
     {
+        animator = transform.GetChild(1).GetComponent<Animator>();
         audioSource = GetComponent<AudioSource>();
         attackTimer = attackSpeed;
 	}
@@ -39,9 +41,6 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
             attackTimer -= Time.deltaTime;
             canvas = transform.GetChild(0).gameObject;
         }
-
-        
-        
 	}
 
     void Movement()
@@ -50,30 +49,43 @@ public class FriendlyOrigami : MonoBehaviour, IHittable
         {
             if(Vector3.Distance(transform.position, hit.transform.position) > 2)
             {
+                animator.SetBool("Walking", true);
                 transform.Translate(0, 0, movementSpeed * Time.deltaTime);
             }
             else if (hit.transform.CompareTag("Enemy"))
             {
+                animator.SetBool("Walking", false);
                 hitEnd = false;
                 //Timertje
                 if (attackTimer <= 0)
                 {
+                    StartCoroutine(WaitAndSetFalse("Attacking"));
                     Attack(hit.transform.GetComponent<EnemyOrigami>());
                     attackTimer = attackSpeed;
                 }
             }
             else if (hit.transform.CompareTag("EndHold") && hitEnd == false)
             {
+                animator.SetBool("Walking", false);
                 hitEnd = true;
                 hit.transform.parent.GetComponent<EndHold>().currentHold += 1;
             }
         }
         else
         {
+            animator.SetBool("Walking", true);
             transform.Translate(0, 0, movementSpeed * Time.deltaTime);
         }
         
     }
+
+    IEnumerator WaitAndSetFalse(string animName)
+    {
+        animator.SetBool(animName, true);
+        yield return new WaitForSeconds(0.2f);
+        animator.SetBool(animName, false);
+    }
+
 
     void Attack(EnemyOrigami enemy)
     {

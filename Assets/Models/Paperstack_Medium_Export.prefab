@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23738285878995896}
   - component: {fileID: 95065602391001794}
   m_Layer: 0
-  m_Name: Paperstack_Medium
+  m_Name: Paperstack_Medium_Export
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

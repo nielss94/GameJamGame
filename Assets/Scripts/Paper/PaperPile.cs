@@ -29,7 +29,7 @@ public class PaperPile : MonoBehaviour {
             {
                 if (paperStock > 0)
                 {
-                    GameObject go = Instantiate(paper, new Vector3(transform.position.x - 1, transform.position.y, transform.position.z), paper.transform.rotation) as GameObject;
+                    GameObject go = Instantiate(paper, new Vector3(transform.position.x - 2, transform.position.y, transform.position.z), paper.transform.rotation) as GameObject;
                     currentPaper = go;
                     go.GetComponent<Paper>().paperPile = this;
                     paperStock--;
