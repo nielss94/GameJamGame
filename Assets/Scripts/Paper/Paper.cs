@@ -36,7 +36,7 @@ public class Paper : MonoBehaviour {
             GameObject go = Instantiate(swipeBlock, new Vector3(Camera.main.transform.position.x + 7.5f, Camera.main.transform.position.y - 2.5f, Camera.main.transform.position.z + 7.5F), swipeBlock.transform.rotation) as GameObject;
             go.transform.Find("SwipeBlock").GetComponent<SwipeBlock>().selectedLane = selectedLane;
             go.transform.Find("SwipeBlock").GetComponent<SwipeBlock>().paperPile = paperPile;
-            selectedLane.GetComponent<MeshRenderer>().material.color = Color.white;
+            selectedLane.GetComponent<MeshRenderer>().enabled = false;
             Destroy(gameObject);
         }
         else
@@ -47,12 +47,12 @@ public class Paper : MonoBehaviour {
 
     void SelectLane(GameObject lane)
     {
-        if(selectedLane != null)
+        if (selectedLane != null)
         {
-            selectedLane.GetComponent<MeshRenderer>().material.color = Color.white;
+            selectedLane.GetComponent<MeshRenderer>().enabled = false;
         }
-        
+
         selectedLane = lane;
-        selectedLane.GetComponent<MeshRenderer>().material.color = Color.green;
+        selectedLane.GetComponent<MeshRenderer>().enabled = true;
     }
 }
