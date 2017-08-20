@@ -40,13 +40,33 @@ public class SwipeBlock : MonoBehaviour {
             if (selectedDot.GetComponent<Dot>().HasDotSet())
             {
                 SetNewDotSet(selectedDot.GetComponent<Dot>().dotSet);
+                switch (selectedDot.name)
+                {
+                    case "Water":
+                        Instantiate(selectedDot.GetComponent<Dot>().animatingObject,
+                       new Vector3(Camera.main.transform.position.x + 15, selectedDot.GetComponent<Dot>().animatingObject.transform.position.y,
+                       selectedDot.GetComponent<Dot>().animatingObject.transform.position.z), selectedDot.GetComponent<Dot>().animatingObject.transform.rotation);
+                        break;
+                    case "Flying":
+                        Instantiate(selectedDot.GetComponent<Dot>().animatingObject,
+                       new Vector3(Camera.main.transform.position.x + 7.5f, selectedDot.GetComponent<Dot>().animatingObject.transform.position.y,
+                       selectedDot.GetComponent<Dot>().animatingObject.transform.position.z), selectedDot.GetComponent<Dot>().animatingObject.transform.rotation);
+                        break;
+                    case "Ground":
+                        Instantiate(selectedDot.GetComponent<Dot>().animatingObject,
+                       new Vector3(Camera.main.transform.position.x, selectedDot.GetComponent<Dot>().animatingObject.transform.position.y,
+                       selectedDot.GetComponent<Dot>().animatingObject.transform.position.z), selectedDot.GetComponent<Dot>().animatingObject.transform.rotation);
+                        break;
+                }
+               
+                GameController.instance.StartCoroutine(GameController.instance.DeactivateObjectForSeconds(transform.parent.gameObject, 1));
             }else
             {
                 //Add selected lane
                 player.SpawnOrigami(selectedDot.GetComponent<Dot>().origami, selectedLane, LevelController.instance.stageNumber);
                 ResetDotSet();
                 paperPile.folding = false;
-                Destroy(gameObject);
+                Destroy(transform.parent.gameObject);
             }
             selectedDot = null;
         }
@@ -73,7 +93,7 @@ public class SwipeBlock : MonoBehaviour {
                        
                         Vector2 goPos = player.GetComponent<Camera>().WorldToScreenPoint(go.transform.position);
                         
-                        if (Vector2.Distance(lp, new Vector2(goPos.x, goPos.y)) < 60)
+                        if (Vector2.Distance(lp, new Vector2(goPos.x, goPos.y)) < 30)
                         {
                             go.GetComponent<MeshRenderer>().material.color = Color.red;
                             dot = go;
@@ -129,4 +149,5 @@ public class SwipeBlock : MonoBehaviour {
             connectDots.Add(t.gameObject);
         }
     }
+
 }

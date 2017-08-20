@@ -7,12 +7,8 @@ public class Dot : MonoBehaviour
 {
     public GameObject dotSet;
     public Origami origami;
-
-
-    void Start()
-    {
-
-    }
+    public GameObject animatingObject;
+    
 
     public bool HasDotSet()
     {
