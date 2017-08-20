@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23151158837836252}
   - component: {fileID: 95352879230627762}
   m_Layer: 0
-  m_Name: Ground_Elephant
+  m_Name: Ground_Elephant_Export
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
