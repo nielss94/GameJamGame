@@ -53,6 +53,6 @@ public class Paper : MonoBehaviour {
         }
         
         selectedLane = lane;
-        selectedLane.GetComponent<MeshRenderer>().material.color = Color.red;
+        selectedLane.GetComponent<MeshRenderer>().material.color = Color.green;
     }
 }

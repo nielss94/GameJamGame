@@ -27071,7 +27071,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 5bd01e353046cf4499918fa3fab27100, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -27305,6 +27305,8 @@ MonoBehaviour:
     type: 2}
   paperPile: {fileID: 0}
   selectedLane: {fileID: 0}
+  handsAnimation: {fileID: 1187528135153052, guid: 64a2ae8824772b1419f0dd8a65aa12d2,
+    type: 2}
 --- !u!137 &137916191281268282
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

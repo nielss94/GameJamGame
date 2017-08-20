@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Enums;
 
 public class GameController : MonoBehaviour {
 
@@ -38,5 +39,15 @@ public class GameController : MonoBehaviour {
         yield return new WaitForSeconds(t);
         
         g.SetActive(true);
+    }
+
+    public IEnumerator SpawnOrigami(Origami origami, GameObject lane, GameObject hands)
+    {
+        Debug.Log("AOOO?");
+        GameObject go = Instantiate(hands, new Vector3(Camera.main.transform.position.x, hands.transform.position.y, Camera.main.transform.position.z + 7.5f), hands.transform.rotation) as GameObject;
+        yield return new WaitForSeconds(2.5f);
+        Debug.Log("AOOO2?");
+        Destroy(go);
+        GameObject.Find("Main Camera").GetComponent<Player>().SpawnOrigami(origami, lane, LevelController.instance.stageNumber);
     }
 }

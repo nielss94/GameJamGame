@@ -9,18 +9,24 @@ public class EndHold : MonoBehaviour
     public int currentHold;
     public GameObject nextLevel;
     public GameObject endScreen;
-
-
-	// Use this for initialization
-	void Start ()
+    public bool isEndOfLevel;
+    private GameObject[] allEnemies = new GameObject[0];
+    // Use this for initialization
+    void Start ()
     {
+        
         currentHold = 0;
 	}
 	
 	// Update is called once per frame
 	void Update ()
     {
-		if (currentHold >= 3)
+        if (isEndOfLevel)
+        {
+            allEnemies = GameObject.FindGameObjectsWithTag("Enemy");
+        }
+        
+        if (currentHold >= 3 || (currentHold >= 1 && allEnemies.Length <= 0 && isEndOfLevel))
         {
             if(nextLevel != null)
             {

@@ -108,6 +108,73 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &21128532
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 185848986}
+    m_Modifications:
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0.70703506
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0.010075924
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0.01007576
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.7070349
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalScale.z
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90.00001
+      objectReference: {fileID: 0}
+    - target: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -1.6330001
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 747a59543fb100143bb4c2de8ca25449, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &21128533 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4966616150388608, guid: 747a59543fb100143bb4c2de8ca25449,
+    type: 2}
+  m_PrefabInternal: {fileID: 21128532}
 --- !u!1 &185848981
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +216,7 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 185848981}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_MotionVectors: 1
@@ -203,7 +270,8 @@ Transform:
   m_LocalRotation: {x: -0.15424652, y: 0.69007736, z: -0.15424606, w: 0.6900793}
   m_LocalPosition: {x: 8.47998, y: -4.8139443, z: 9.968308}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 21128533}
   m_Father: {fileID: 1958655559}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -369,7 +437,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.8
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -532,6 +600,7 @@ GameObject:
   - component: {fileID: 1958655561}
   - component: {fileID: 1958655562}
   - component: {fileID: 1958655563}
+  - component: {fileID: 1958655564}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -738,3 +807,11 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!45 &1958655564
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1958655554}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: e7471c7bc3e48f8408ba34ff15fec1e5, type: 2}

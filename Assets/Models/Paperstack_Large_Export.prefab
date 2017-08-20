@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 23273864047557622}
   - component: {fileID: 95721455655287582}
   m_Layer: 0
-  m_Name: Paperstack_Large
+  m_Name: Paperstack_Large_Export
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
